@@ -21,10 +21,51 @@
   }
 }
 
+@keyframes rainbow {
+  0% { color: #ffb3b3; } /* Light Red */
+  14% { color: #ffcc99; } /* Light Orange */
+  28% { color: #ffff99; } /* Light Yellow */
+  42% { color: #ccffcc; } /* Light Green */
+  57% { color: #99ccff; } /* Light Blue */
+  71% { color: #d4a0ff; } /* Light Purple */
+  85% { color: #ffb3e6; } /* Light Pink */
+  100% { color: #ffb3b3; } /* Light Red */
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
+
+@keyframes rainbow {
+  0% { color: #ffb3b3; } /* Light Red */
+  14% { color: #ffcc99; } /* Light Orange */
+  28% { color: #ffff99; } /* Light Yellow */
+  42% { color: #ccffcc; } /* Light Green */
+  57% { color: #99ccff; } /* Light Blue */
+  71% { color: #d4a0ff; } /* Light Purple */
+  85% { color: #ffb3e6; } /* Light Pink */
+  100% { color: #ffb3b3; } /* Light Red */
+}
+
 .animate-fadeIn {
   animation: fadeIn 2s ease-in-out;
 }
 
 .animate-bounce {
   animation: bounce 2s infinite;
+}
+
+.rainbow-text {
+  animation: rainbow 3s linear infinite;
+  font-size: 10rem; /* Adjust as needed */
+  text-shadow: 
+    1px 1px 0 #000, 
+    -1px -1px 0 #000, 
+    1px -1px 0 #000, 
+    -1px 1px 0 #000; /* Creates a stroke effect */
+}
+
+.animate-float {
+  animation: float 10s linear infinite;
 }
