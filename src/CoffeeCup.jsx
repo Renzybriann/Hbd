@@ -21,11 +21,11 @@ function CoffeeCup() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen bg-gray-200 overflow-hidden">
+    <div className="relative flex flex-col items-center justify-center h-screen bg-gray-200 overflow-hidden p-4 sm:p-8">
       {showMessage && <Confetti />}
       {!showMessage && (
         <>
-          <div className="text-xl font-bold mb-4 animate-fadeIn text-center">
+          <div className="text-lg sm:text-xl font-bold mb-4 animate-fadeIn text-center">
             <div>Mahilig ka ba sa kape?</div> 
             <div>Kung oo pindutin mo yung kape</div>
           </div>
@@ -33,28 +33,26 @@ function CoffeeCup() {
             <img
               src={coffeeCupImage}
               alt="Coffee Cup"
-              className={`transition-transform duration-500 ${isOpened ? 'transform scale-110' : ''}`}
+              className={`transition-transform duration-500 ${isOpened ? 'transform scale-110' : ''} w-40 sm:w-60 md:w-80`}
             />
           </div>
         </>
       )}
       {showMessage && (
-        <div className="text-9xl font-bold text-center animate-bounce animate-fadeIn">
+        <div className="text-4xl sm:text-6xl md:text-8xl font-bold text-center animate-bounce animate-fadeIn">
           <div>Happy Birthday</div> 
-          <div className="text-[200px] mt-9 rainbow-text">
+          <div className="text-6xl sm:text-8xl md:text-[200px] mt-9 rainbow-text">
             Jalleah!!!
           </div>
-           {/* Balloons */}
-      <div className="absolute top-40 -left-52 z-10">
-        <img src={balloon} alt="Balloon" className="w-80 h-80 " />
-      </div>
-      <div className="absolute top-40 -right-52 z-10">
-        <img src={balloon} alt="Balloon" className="w-80 h-80 " />
-      </div>
+          {/* Balloons */}
+          <div className="absolute top-20 left-0 transform -translate-x-1/2 z-10 hidden md:block">
+            <img src={balloon} alt="Balloon" className="w-32 sm:w-48 md:w-64" />
+          </div>
+          <div className="absolute top-20 right-0 transform translate-x-1/2 z-10 hidden md:block">
+            <img src={balloon} alt="Balloon" className="w-32 sm:w-48 md:w-64" />
+          </div>
         </div>
-        
       )}
-     
     </div>
   );
 }
