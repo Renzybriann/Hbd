@@ -45,10 +45,10 @@ function CoffeeCup() {
             Jalleah!!!
           </div>
           {/* Balloons */}
-          <div className="absolute top-20 left-0 transform -translate-x-1/2 z-10 hidden md:block">
+          <div className="absolute top-20 -left-32 transform -translate-x-1/2 z-10 hidden md:block animate-float">
             <img src={balloon} alt="Balloon" className="w-32 sm:w-48 md:w-64" />
           </div>
-          <div className="absolute top-20 right-0 transform translate-x-1/2 z-10 hidden md:block">
+          <div className="absolute top-20 -right-32 transform translate-x-1/2 z-10 hidden md:block animate-float">
             <img src={balloon} alt="Balloon" className="w-32 sm:w-48 md:w-64" />
           </div>
         </div>
