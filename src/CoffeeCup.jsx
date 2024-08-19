@@ -26,8 +26,8 @@ function CoffeeCup() {
       {!showMessage && (
         <>
           <div className="text-lg sm:text-xl font-bold mb-4 animate-fadeIn text-center">
-            <div>Mahilig ka ba sa kape?</div> 
-            <div>Kung oo pindutin mo yung kape</div>
+            <div>Click the Cup</div> 
+            
           </div>
           <div className="relative flex items-center justify-center cursor-pointer" onClick={handleClick}>
             <img
